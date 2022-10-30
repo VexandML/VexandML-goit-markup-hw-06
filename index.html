@@ -49,7 +49,7 @@
                                     <use href="./images/icons.svg#icon-close"></use>
                                 </svg>
                             </button>
-                            <h2 class="form-title">Залиште свої дані, ми вам передзвонимо</h2>
+                            <p class="form-title">Залиште свої дані, ми вам передзвонимо</p>
                             <form action="/" name="contact-form" autocomplete="on">
                                 <label class="form-label-group" for="username">
                                     <span class="form-fields-text">Ім'я</span>
@@ -72,10 +72,18 @@
                                         <use href="./images/icons.svg#icon-email-black"></use>
                                     </svg>
                                 </label>
-                                    <label class="form-label-group" for="">
+                                    <label class="form-comment" for="comment">
                                         <span class="form-fields-text">Коментар</span>
-                                        <textarea class="form-comment" name="username-comment" id="username-comment" placeholder="Введіть текст"></textarea>
+                                        <textarea class="form-text" name="username-comment" id="username-comment" placeholder="Введіть текст"></textarea>
                                     </label>
+                                <label class="form-policy" for="policy">
+                                    <input class="checkbox-input visually-hidden" type="checkbox">
+                                    <span class="policy-text">
+                                         Погоджуюся з розсилкою та приймаю
+                                        <a class="policy-link" href="/">Умови договору</a>
+                                    </span>
+                                </label>
+                                <button class="button-form" type="submit">Відправити</button>
                             </form>
                         </div>
                     </div>
