@@ -857,20 +857,20 @@ textarea {
   margin-bottom: 30px;
 }
 
-.policy-text {
+/* .policy-text {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--color-primary);
-}
+} */
 
-.policy-link {
+/* .policy-link {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-decoration-line: underline;
   color: var(--color-brand)
-}
+} */
 
 .button-form {
   display: block;
