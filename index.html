@@ -72,14 +72,21 @@
                                         <use href="./images/icons.svg#icon-email-black"></use>
                                     </svg>
                                 </label>
-                                    <label class="form-comment" for="comment">
-                                        <span class="form-fields-text">Коментар</span>
-                                        <textarea class="form-text" name="username-comment" id="comment" placeholder="Введіть текст"></textarea>
-                                    </label>
-                                    <input class="checkbox-input visually-hidden" id="terms-checkbox" type="checkbox" name="terms-checkbox">
-                                    <label class="checkbox-label" for="terms-checkbox">Погоджуюся з розсилкою та приймаю 
-                                        <a class="checkbox-link" href="/">Умови договору</a>
-                                    </label>
+                                <label class="form-comment" for="comment">
+                                    <span class="form-fields-text">Коментар</span>
+                                    <textarea class="form-text" name="username-comment" id="comment" placeholder="Введіть текст"></textarea>
+                                </label>
+                                <label class="form-terms-group">
+                                    <input class="checkbox visually-hidden" type="checkbox">
+                                    <span class="terms-icon">
+                                        <svg class="terms-checked" width="16" height="15">
+                                            <use href="./images/icons.svg#icon-icon-check2"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="terms-text">Погоджуюся з розсилкою та приймаю
+                                        <a class="terms-link" href="/">Умови договору</a>
+                                    </span>
+                                </label>
                                 <button class="button-form" type="submit">Відправити</button>
                             </form>
                         </div>
@@ -403,6 +410,22 @@
                         </a>
                     </li>
                 </ul>
+            </div>
+            <div class="mailing">
+                <form action="/">
+                    <p class="mailing-title">Підпишіться на розсилку</p>
+                    <div class="mailing-form">
+                        <label class="mailing-list" for="mail"></label>
+                        <input class="mailing-field" id="mail" type="email" name="mail" placeholder="E-mail">
+                        <button class="mailing-button" type="submit">Підписатися
+                            <span class="mailing-icon">
+                                <svg class="icon-send" width="24" height="24">
+                                    <use href="./images/icons.svg#icon-send"></use>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </footer>

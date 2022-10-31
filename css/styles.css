@@ -47,6 +47,19 @@ section {
   padding: 0 0 94px 0;
 }
 
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
 /* HEADER STARTS */
 /* HEADER GLobal */
 .header {
@@ -586,6 +599,68 @@ section {
     background-color: var(--color-brand);
 }
 
+/* FOOTER MAILING */
+.mailing {
+  display: flex;
+  position: relative;
+  margin-left: 93px;
+}
+
+.mailing-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-bcg-primary);
+}
+
+.mailing-form {
+  display: flex;
+  margin-top: 20px;
+}
+
+.mailing-field {
+  display: block;
+  width: 358px;
+  background-color: transparent;
+  padding: 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  color: var(--color-bcg-primary);
+}
+
+.mailing-button {
+  position: relative;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  padding: 10px 29px;
+  width: 200px;
+  margin-left: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--color-bcg-primary);
+  background-color: var(--color-brand);
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+  border-radius: 4px;
+  border: none;
+}
+
+.mailing-icon {
+  position: absolute;
+  top: 13px;
+  right: 28px;
+}
+
+.icon-send {
+  fill: var(--color-bcg-primary);
+}
+
 /* Портфоліо */
 .cases {
   padding: 0;
@@ -793,6 +868,7 @@ section {
   letter-spacing: 0.01em;
   color: var(--color-primary);
   margin-bottom: 4px;
+  text-align: start;
 }
 
 .form-input {
@@ -836,68 +912,40 @@ textarea {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* .form-policy {
+.form-input:focus,
+.form-input:hover,
+.form-text:hover,
+.form-text:focus {
+  border-color: var(--color-brand);
+}
+
+.form-label-group:hover .form-icon,
+.form-label-group:focus .form-icon {
+  fill: var(--color-brand);
+}
+
+.form-terms-group {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
-} */
-
-.checkbox-input {
-  appearance: none;
 }
 
-.checkbox-input:checked + .checkbox-label {
-  color: red;
-}
-
-.checkbox-label {
-  position: relative;
-  padding-left: 28px;
-}
-
-.checkbox-label::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 15px;
-  border: 1px solid violet;
-  border-radius: 2px;
-  content: "";
-}
-
-.checkbox-label::after {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  width: 10px;
-  height: 5px;
-  border: 1px solid violet;
-  border-radius: 2px;
-  content: "";
-  background-color: blue;
-  opacity: 0;
-}
-
-.checkbox-input:checked + .checkbox-label::after {
-  opacity: 1;
-}
-
-.checkbox-label {
+.terms-text {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--color-primary);
+  margin-left: 35px;
 }
 
-.checkbox-link {
+.terms-link {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-decoration-line: underline;
-  color: var(--color-brand)
+  color: var(--color-brand);
 }
 
 .button-form {
@@ -919,15 +967,35 @@ textarea {
   margin-right: auto;
 }
 
-.visually-hidden {
+/* CHECKBOX */
+.terms-icon {
   position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
+  left: 12px;
+  width: 16px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  background-color: transparent;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.terms-checked {
+  fill: var(--color-bcg-primary);
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox:checked + .terms-icon {
+  background-color: var(--color-brand);
+}
+
+.checkbox:focus + .terms-icon {
+  border-color: var(--color-brand);
+}
+
+.checkbox:checked + .terms-icon + .terms-checked {
+  opacity: 1;
 }
